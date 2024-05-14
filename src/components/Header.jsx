@@ -10,6 +10,9 @@ const Header = () => {
     <div className={styles.header_container}>
         <div className={styles.header_comienzo}>
             <p>Noter App</p>
+            <div id={styles.button_add}>
+              Añadir nota
+            </div>
         </div>
         <div className={styles.header_end}>
             <p>{d}/{month}/{year}</p>

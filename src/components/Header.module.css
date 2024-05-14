@@ -10,6 +10,17 @@
 .header_comienzo{
     padding-left: 40px;
     font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+#button_add{
+    font-weight: 400;
+    font-size: 12px;
+    background-color: #4e54c8;
+    padding: 3px 10px;
 }
 
 .header_end{
