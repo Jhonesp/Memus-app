@@ -6,7 +6,7 @@ const NotasContainer = ({notas}) => {
   return (
     <div className={styles.container}>
         {notas.map((nota, index) => (
-            <Nota autor={nota.autor} texto={nota.descripcion}/>
+            <Nota key={index} autor={nota.autor} texto={nota.descripcion}/>
         ))}
     </div>
   )
