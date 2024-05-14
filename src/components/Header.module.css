@@ -5,6 +5,8 @@
     position: sticky;
     width: 100vw;
     justify-content: space-between;
+    user-select: none;
+    z-index: 10;
 }
 
 .header_comienzo{
@@ -21,6 +23,11 @@
     font-size: 12px;
     background-color: #4e54c8;
     padding: 3px 10px;
+    cursor: pointer;
+}
+
+#button_add:active{
+    background-color: black;
 }
 
 .header_end{

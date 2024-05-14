@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Header.module.css'
 
-const Header = () => {
+const Header = ({setModal}) => {
     const date = new Date();
     const d = date.getDate();
     const month = (date.getMonth() +1);
     const year = date.getFullYear();
+    
   return (
+    <>
     <div className={styles.header_container}>
         <div className={styles.header_comienzo}>
-            <p>Noter App</p>
-            <div id={styles.button_add}>
+            <p>Memus App</p>
+            <div id={styles.button_add} onClick={ ()=> setModal(true)}>
               Añadir nota
             </div>
         </div>
@@ -18,6 +20,8 @@ const Header = () => {
             <p>{d}/{month}/{year}</p>
         </div>
     </div>
+
+    </>
   )
 }
 
