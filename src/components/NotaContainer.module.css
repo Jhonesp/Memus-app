@@ -6,3 +6,9 @@
     gap: 20px;
     background: #4e54c8;
 }
+
+.empty{
+    position: absolute;
+    top: 30vh;
+    left: 40vw;
+}

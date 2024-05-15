@@ -9,7 +9,14 @@ function App() {
   let [isModal, setModal] = useState(false);
   let [notas, setNotas] = useState([]);
   const agregarNota = (nota) => {
-    setNotas([...notas, nota]);
+    fetch('http://localhost:8080/posts',{
+      method: 'POST',
+      body: JSON.stringify(nota),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    setNotas([nota, ...notas]);
   };
   const deleteNota =(id) => {
     const newNotas = notas.filter((nota, i) => i !== id);
