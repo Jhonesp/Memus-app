@@ -11,12 +11,17 @@ function App() {
   const agregarNota = (nota) => {
     setNotas([...notas, nota]);
   };
+  const deleteNota =(id) => {
+    const newNotas = notas.filter((nota, i) => i !== id);
+    setNotas(newNotas);
+    console.log(notas);
+  }
 
   return (
     <>
     <div className={styles.container}>
         <Header setModal={setModal}/>
-        <NotasContainer notas={notas} />
+        <NotasContainer notas={notas} deleteNota={deleteNota}/>
         {isModal && (<Modal setModal={setModal} setNotas={agregarNota}/>)}
         <Fondo />
     </div>

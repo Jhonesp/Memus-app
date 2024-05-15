@@ -11,8 +11,8 @@
   .modal {
     background-color: #fff;
     position: absolute;
-    width: 300px;
-    top: 30vh;
+    min-width: 300px;
+    top: 25vh;
     left: 35vw;
     border: none;
     border-radius: 6px;
