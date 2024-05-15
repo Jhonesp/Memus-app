@@ -14,7 +14,6 @@ function App() {
   const deleteNota =(id) => {
     const newNotas = notas.filter((nota, i) => i !== id);
     setNotas(newNotas);
-    console.log(notas);
   }
 
   return (

@@ -12,6 +12,8 @@
 .nota_container p{
     text-align: center;
     font-weight: 500;
+    padding: 0 5px;
+    overflow-y: auto;
 }
 
 .nota_top{
@@ -37,3 +39,25 @@
     font-size: 10px;
     text-align: left;
 }
+
+/* Estilo para el scrollbar */
+::-webkit-scrollbar {
+    width: 2px; /* Ancho del scrollbar */
+    height: 3px;
+  }
+  
+  /* Estilo para la pista del scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista */
+  }
+  
+  /* Estilo para el pulgar del scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color del pulgar */
+    border-radius: 10px; /* Borde redondeado del pulgar */
+  }
+  
+  /* Estilo para el pulgar del scrollbar cuando se pasa el mouse sobre él */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cambio de color al pasar el mouse */
+  }
