@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 
 const Modal = ({setModal, setNotas}) => {
     let [autor, setAutor] = useState();
-    let [descripcion, setTexto] = useState();
+    let [body, setTexto] = useState();
   return (
     <>
     <div className={styles.backdrop}></div>
@@ -18,7 +18,7 @@ const Modal = ({setModal, setNotas}) => {
             <textarea name="texto" id="" placeholder='Ingrese el texto' onChange={(e) => {setTexto(e.target.value)}}></textarea>
         </div>
         <div className={styles.button}>
-            <button onClick={()=>{setNotas({autor, descripcion}); setModal(false)}}>Enviar</button>
+            <button onClick={()=>{setNotas({autor, body}); setModal(false)}}>Enviar</button>
         </div>
     </div>
     </>

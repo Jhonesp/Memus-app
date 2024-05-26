@@ -17,7 +17,7 @@ const NotasContainer = ({notas, deleteNota}) => {
       </div>: 
       <div className={styles.container}>
       {notas.map((nota, index) => (
-        <Nota key={index} id={index} autor={nota.autor} texto={nota.descripcion} deleteNota={deleteNota}/>
+        <Nota key={index} id={index} autor={nota.autor} texto={nota.body} deleteNota={deleteNota}/>
         ))}
         </div>}
         
