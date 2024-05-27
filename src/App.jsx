@@ -8,9 +8,10 @@ import Modal from './components/Modal'
 function App() {
   let [isModal, setModal] = useState(false);
   let [notas, setNotas] = useState([]);
+  const posts_URL = 'https://dummy-backend-omega.vercel.app/posts';
 
   async function fetchPosts(){
-    const response = await fetch('http://localhost:4000/posts');
+    const response = await fetch(posts_URL);
     const resData = await response.json();
     setNotas(resData.posts);
   }
@@ -20,7 +21,7 @@ function App() {
   }, [])
 
   async function agregarNota(nota){
-    await fetch('http://localhost:4000/posts',{
+    await fetch(posts_URL,{
       method: 'POST',
       body: JSON.stringify(nota),
       headers: {
