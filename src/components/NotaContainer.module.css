@@ -12,3 +12,9 @@
     top: 30vh;
     left: 40vw;
 }
+
+@media screen and (max-width: 500px) {
+    .container{
+        padding: 20px;
+    }
+}
