@@ -8,12 +8,15 @@ import Modal from './components/Modal'
 function App() {
   let [isModal, setModal] = useState(false);
   let [notas, setNotas] = useState([]);
+  const [isFetching, setFetching] = useState(false);
   const posts_URL = 'https://dummy-backend-omega.vercel.app/posts';
 
   async function fetchPosts(){
+    setFetching(true);
     const response = await fetch(posts_URL);
     const resData = await response.json();
     setNotas(resData.posts);
+    setFetching(false)
   }
 
   useEffect(() => {    
@@ -40,7 +43,7 @@ function App() {
     <>
     <div className={styles.container}>
         <Header setModal={setModal}/>
-        <NotasContainer notas={notas} deleteNota={deleteNota}/>
+        <NotasContainer notas={notas} deleteNota={deleteNota} fetching={isFetching}/>
         {isModal && (<Modal setModal={setModal} setNotas={agregarNota}/>)}
         <Fondo />
     </div>
