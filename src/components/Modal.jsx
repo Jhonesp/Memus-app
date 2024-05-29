@@ -14,7 +14,7 @@ const Modal = ({setModal, setNotas}) => {
         </div>
         <div className={styles.forms}>
             <label htmlFor="autor">Autor</label>
-            <input type="text" name='autor' placeholder='Quien es el autor?' onChange={(e) =>{setAutor(e.target.value)}}/>
+            <input type="text" autoComplete='off' name='autor' placeholder='Quien es el autor?' onChange={(e) =>{setAutor(e.target.value)}}/>
             <label htmlFor="texto">Contenido</label>
             <textarea name="texto" id="" placeholder='La nota' onChange={(e) => {setTexto(e.target.value)}}></textarea>
         </div>
