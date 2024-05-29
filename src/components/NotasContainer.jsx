@@ -17,12 +17,14 @@ const NotasContainer = ({notas, deleteNota, fetching}) => {
       </div>: 
       <div className={styles.container}>
         {notas.map((nota, index) => (
-          <Nota key={index} id={index} autor={nota.autor} texto={nota.body} deleteNota={deleteNota}/>
+          <Nota key={index} id={nota._id} autor={nota.autor} texto={nota.body} deleteNota={deleteNota}/>
           ))}
       </div>}
         { fetching && (
           <div className={styles.empty}>
-              <h3>Cargando notas... !</h3>
+              <div className={styles.loader}>
+                <div className={styles.jimu_primary_loading}></div>
+              </div>
           </div>
         )
 

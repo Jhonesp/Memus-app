@@ -33,11 +33,15 @@
 
 .header_end{
     padding-right: 40px;
+    color: #fff;
 }
 
 @media only screen and (max-width: 600px){
     .header_comienzo{
         padding-left: 5px;
         gap: 5px;
+    }
+    .header_end{
+        padding: 0;
     }
 }

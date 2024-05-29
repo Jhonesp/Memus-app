@@ -14,8 +14,9 @@ const Modal = ({setModal, setNotas}) => {
         </div>
         <div className={styles.forms}>
             <label htmlFor="autor">Autor</label>
-            <input type="text" name='autor' onChange={(e) =>{setAutor(e.target.value)}}/>
-            <textarea name="texto" id="" placeholder='Ingrese el texto' onChange={(e) => {setTexto(e.target.value)}}></textarea>
+            <input type="text" name='autor' placeholder='Quien es el autor?' onChange={(e) =>{setAutor(e.target.value)}}/>
+            <label htmlFor="texto">Contenido</label>
+            <textarea name="texto" id="" placeholder='La nota' onChange={(e) => {setTexto(e.target.value)}}></textarea>
         </div>
         <div className={styles.button}>
             <button onClick={()=>{setNotas({autor, body}); setModal(false)}}>Enviar</button>

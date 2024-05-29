@@ -9,11 +9,11 @@ function App() {
   let [isModal, setModal] = useState(false);
   let [notas, setNotas] = useState([]);
   const [isFetching, setFetching] = useState(false);
-  const posts_URL = 'https://dummy-backend-omega.vercel.app/posts';
+  const posts_URL = 'https://dummy-backend-omega.vercel.app';
 
   async function fetchPosts(){
     setFetching(true);
-    const response = await fetch(posts_URL);
+    const response = await fetch(posts_URL+'/posts');
     const resData = await response.json();
     setNotas(resData.posts);
     setFetching(false)
@@ -24,19 +24,21 @@ function App() {
   }, [])
 
   async function agregarNota(nota){
-    await fetch(posts_URL,{
+    await fetch(posts_URL+'/posts',{
       method: 'POST',
       body: JSON.stringify(nota),
       headers: {
         'Content-Type': 'application/json'
       }
     })
-
     await fetchPosts();
   };
-  const deleteNota =(id) => {
-    const newNotas = notas.filter((nota, i) => i !== id);
-    setNotas(newNotas);
+
+  async function deleteNota(id){
+    await fetch(posts_URL+'/delete/'+id,{
+      method: 'DELETE'
+    })
+    fetchPosts();
   }
 
   return (
