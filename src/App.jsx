@@ -4,6 +4,7 @@ import Header from './components/Header'
 import NotasContainer from './components/NotasContainer'
 import Fondo from './components/Fondo'
 import Modal from './components/Modal'
+import Footer from './components/Footer'
 
 function App() {
   let [isModal, setModal] = useState(false);
@@ -47,6 +48,7 @@ function App() {
         <Header setModal={setModal}/>
         <NotasContainer notas={notas} deleteNota={deleteNota} fetching={isFetching}/>
         {isModal && (<Modal setModal={setModal} setNotas={agregarNota}/>)}
+        <Footer />
         <Fondo />
     </div>
     

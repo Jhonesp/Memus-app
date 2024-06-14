@@ -1,0 +1,26 @@
+.container{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    z-index: 3;
+}
+
+.container h4{
+    margin: 0;
+    font-size: 14px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icons svg{
+    font-size: 30px;
+    color: #fff;
+}
